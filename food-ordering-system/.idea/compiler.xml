@@ -9,6 +9,7 @@
         <module name="order-messaging" />
         <module name="order-domain" />
         <module name="order-application-service" />
+        <module name="common-domain" />
         <module name="order-application" />
         <module name="order-domain-core" />
         <module name="order-dataaccess" />
@@ -18,6 +19,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="" />
+      <module name="common-domain" options="-parameters" />
+      <module name="food-ordering-system" options="-parameters" />
       <module name="order-application" options="-parameters" />
       <module name="order-application-service" options="-parameters" />
       <module name="order-container" options="-parameters" />
@@ -25,7 +29,7 @@
       <module name="order-domain" options="-parameters" />
       <module name="order-domain-core" options="-parameters" />
       <module name="order-messaging" options="-parameters" />
-      <module name="order-service" options="-parameters" />
+      <module name="order-service" options="" />
     </option>
   </component>
 </project>
