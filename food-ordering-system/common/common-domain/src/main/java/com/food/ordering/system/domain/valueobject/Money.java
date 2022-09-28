@@ -7,6 +7,8 @@ import java.util.Objects;
 public class Money {
     private final BigDecimal amount;
 
+    public static final Money ZERO = new Money(BigDecimal.ZERO);
+
     public Money(BigDecimal amount) {
         this.amount = amount;
     }
@@ -50,5 +52,9 @@ public class Money {
 
     private BigDecimal setScale(BigDecimal input) {
         return input.setScale(2, RoundingMode.HALF_EVEN);
+    }
+
+    public Money multiply(int quantity) {
+        return new Money(setScale(this.amount.multiply(BigDecimal.valueOf(quantity))));
     }
 }
