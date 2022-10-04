@@ -62,7 +62,7 @@ public class OrderItem extends BaseEntity<OrderItemId> {
         private Money price;
         private Money subTotal;
 
-        private Builder() {
+        public Builder() {
         }
 
         public Builder orderItemId(OrderItemId val) {
